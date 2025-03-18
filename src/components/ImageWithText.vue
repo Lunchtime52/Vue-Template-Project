@@ -13,7 +13,7 @@
 <script>
 export default {
   props: {
-    imageUrl: { type: String, default: "https://via.placeholder.com/600x400" },
+    imageUrl: { type: String, default: "https://placehold.co/600x400" },
     imageAlt: { type: String, default: "Placeholder" },
     title: { type: String, default: "Title" },
     text: { type: String, default: "Lorem ipsum..." },

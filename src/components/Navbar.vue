@@ -1,9 +1,9 @@
 <template>
-  <BNavbar :type="variant" :variant="color">
+  <BNavbar toggable="md" :type="variant" :variant="color">
     <BNavbarBrand :href="logoHref">{{ logoText }}</BNavbarBrand>
     <BNavbarNav>
       <BNavItem v-for="link in navLinks" :key="link.href" :href="link.href">{{
-        link.label
+        link.text
       }}</BNavItem>
     </BNavbarNav>
   </BNavbar>
@@ -13,10 +13,10 @@
 export default {
   props: {
     logoText: { type: String, default: "My Site" },
-    logoHref: { type: String, default: "#" },
+    logoHref: { type: String, default: "/" },
     navLinks: { type: Array, default: () => [] },
     variant: { type: String, default: "dark" },
-    color: { type: String, default: "primary" },
+    color: { type: String, default: "info" },
   },
 };
 </script>

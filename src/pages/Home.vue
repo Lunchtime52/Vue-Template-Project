@@ -1,25 +1,16 @@
 <template>
   <div>
-    <Navbar
-      logoText="My Awesome Site"
-      :navLinks="[
-        { text: 'Home', href: '#' },
-        { text: 'About', href: '/about' },
-        { text: 'Contact', href: '/contact' },
-      ]"
-    />
-
     <Hero
       title="Welcome to Our Site!"
-      subtitle="Test"
+      subtitle="Sample Subtitle"
       buttonText="Explore Now"
-      buttonHref="/about"
+      buttonHref="/contact"
       background="light"
       padding="4"
     />
 
     <ImageWithText
-      imageUrl="https://via.placeholder.com/800x400"
+      imageUrl="https://placehold.co/800x400"
       title="Our Featured Product"
       text="This is a brief description of our featured product. It's awesome!"
       imageClass="col-md-6"
@@ -32,7 +23,7 @@
           <Card
             title="Card Title"
             text="Quick example text."
-            imgSrc="https://via.placeholder.com/300x200"
+            imgSrc="https://placehold.co/300x200"
             imgAlt="Card Image"
             buttonText="Read More"
             buttonHref="/card-details"
@@ -40,30 +31,19 @@
         </div>
       </div>
     </div>
-
-    <Footer
-      :footerLinks="[
-        { text: 'Privacy', href: '/privacy' },
-        { text: 'Terms', href: '/terms' },
-      ]"
-    />
   </div>
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue";
 import Hero from "../components/Hero.vue";
 import ImageWithText from "../components/ImageWithText.vue";
 import Card from "../components/Card.vue";
-import Footer from "../components/Footer.vue";
 
 export default {
   components: {
-    Navbar,
     Hero,
     ImageWithText,
     Card,
-    Footer,
   },
 };
 </script>

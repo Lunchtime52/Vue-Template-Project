@@ -18,10 +18,10 @@ export default {
   props: {
     copyright: {
       type: String,
-      default: `© ${new Date().getFullYear()} My Site. All rights reserved.`,
+      default: `© ${new Date().getFullYear()} Ryan Buchanan. All rights reserved.`,
     },
-    padding: { type: Number, default: 3 },
-    background: { type: String, default: "light" },
+    padding: { type: Number, default: 4 },
+    background: { type: String, default: "info" },
     footerLinks: { type: Array, default: () => [] },
   },
 };
