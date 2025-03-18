@@ -4,15 +4,15 @@ This is a Vue.js project template designed to provide a robust foundation for bu
 
 ## Features
 
-*   **Vue.js 3:** Built with the latest version of Vue.js.
-*   **Vue Router:** Pre-configured for client-side routing and navigation.
-*   **UI Library:** Pre-configured with Vuetify 3.
-*   **Styling:**  Ready to use with Vuetify 3 to create beautiful and responsive user interfaces.
-*   **State Management:** Ready for state management with Pinia.
-*   **Linting:** ESLint and Prettier for consistent code style.
-* **Testing**: Vitest is configured for unit and component testing.
-*   **Development Server:** Hot Module Replacement (HMR) for a smooth development experience.
-* **Build**: Optimized for production with Vite.
+- **Vue.js 3:** Built with the latest version of Vue.js.
+- **Vue Router:** Pre-configured for client-side routing and navigation.
+- **UI Library:** Pre-configured with Vuetify 3.
+- **Styling:** Ready to use with Vuetify 3 to create beautiful and responsive user interfaces.
+- **State Management:** Ready for state management with Pinia.
+- **Linting:** ESLint and Prettier for consistent code style.
+- **Testing**: Vitest is configured for unit and component testing.
+- **Development Server:** Hot Module Replacement (HMR) for a smooth development experience.
+- **Build**: Optimized for production with Vite.
 
 ## Getting Started
 
@@ -35,7 +35,7 @@ This is a Vue.js project template designed to provide a robust foundation for bu
     npm run dev
     ```
 
-4. **Run Tests**
+4.  **Run Tests**
 
     ```bash
     npm run test:unit
@@ -66,13 +66,13 @@ vue-template-project/
 
 ## Customization
 
-*   **Components:** Add your custom components in the `src/components` directory.
-* **Layouts**: Create new layouts in the `src/layouts` folder.
-*   **Views:** Create new views (pages) in the `src/views` directory.
-*   **Routes:** Define new routes in `src/router/index.js`.
-*   **State:** Add state stores in `src/stores`.
-*   **Plugins**: Add new vue plugins to `src/plugins` and remember to register them in the main.js
-*   **Configuration:** Modify `vite.config.js`, `.eslintrc.cjs`, and `.prettierrc.cjs` as needed.
+- **Components:** Add your custom components in the `src/components` directory.
+- **Layouts**: Create new layouts in the `src/layouts` folder.
+- **Views:** Create new views (pages) in the `src/views` directory.
+- **Routes:** Define new routes in `src/router/index.js`.
+- **State:** Add state stores in `src/stores`.
+- **Plugins**: Add new vue plugins to `src/plugins` and remember to register them in the main.js
+- **Configuration:** Modify `vite.config.js`, `.eslintrc.cjs`, and `.prettierrc.cjs` as needed.
 
 ## Building for Production
 
@@ -85,4 +85,3 @@ This will create an optimized production build in the `dist` directory.
 ## Contributing
 
 If you'd like to contribute, please fork the repository and submit a pull request.
-

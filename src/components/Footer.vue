@@ -1,19 +1,32 @@
 <template>
-    <footer>
-      <p>&#169; 2024. All Rights Reserved by Ryan Buchanan.</p>  </footer> </template>
-  
-  <style scoped>
-  footer{
-      background-color: rgb(91, 91, 91); /* Set background color of the footer */
-      padding: 10px; /* Add padding around the content */
-      text-align: center; /* Center align the text */
-      font-size: 1.2rem;
-        /* Set font size */
-      position: fixed;
-       /* Commented out: Would fix the footer to the bottom of the viewport */
-      bottom: 0;
-       /* Commented out: Part of fixing the footer to the bottom */
-      width: 100%; 
-      /* Commented out: Part of fixing the footer, ensuring full width */
-  }
-  </style>
+  <footer :class="`text-center py-${padding} bg-${background}`">
+    <p>{{ copyright }}</p>
+    <div v-if="footerLinks.length">
+      <a
+        v-for="link in footerLinks"
+        :key="link.href"
+        :href="link.href"
+        class="mx-2"
+        >{{ link.text }}</a
+      >
+    </div>
+  </footer>
+</template>
+
+<script>
+export default {
+  props: {
+    copyright: {
+      type: String,
+      default: `© ${new Date().getFullYear()} My Site. All rights reserved.`,
+    },
+    padding: { type: Number, default: 3 },
+    background: { type: String, default: "light" },
+    footerLinks: { type: Array, default: () => [] },
+  },
+};
+</script>
+
+<style scoped>
+/* Optional: Add component-specific styles here */
+</style>

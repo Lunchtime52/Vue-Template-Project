@@ -1,16 +1,14 @@
-
 <template>
-  <Nav></Nav>
+  <!-- <Nav></Nav> -->
   <div id="pageview">
     <router-view></router-view>
   </div>
- 
-  <Footer></Footer>
+
+  <!-- <Footer></Footer> -->
 </template>
 
 <style scoped>
-#pageview {
+/* #pageview {
   margin: 75px 0;
-}
-
+} */
 </style>
