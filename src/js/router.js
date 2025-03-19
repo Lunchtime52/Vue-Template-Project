@@ -1,7 +1,8 @@
 import { createWebHistory, createRouter } from "vue-router";
 
-const base = "/";
 
+
+const base = import.meta.env.MODE === 'production' ? '/vue-template/' : '/';
 
 
 function generateRoutes() {
