@@ -2,7 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 
 
 
-const base = '/vue-template/';
+const base = '/Vue-Template-Project/';
 
 
 function generateRoutes() {
