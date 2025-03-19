@@ -7,7 +7,7 @@
       { text: 'Contact', href: '/contact' },
     ]"
   />
-  <div id="pageview">
+  <div id="content" class="mx-auto container ">
     <router-view></router-view>
   </div>
 

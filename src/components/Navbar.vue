@@ -1,5 +1,6 @@
 <template>
-  <BNavbar toggable="md" :type="variant" :variant="color">
+  <BNavbar toggable="md" :type="variant" :variant="color" class="px-4 mb-2">
+    
     <BNavbarBrand :href="logoHref">{{ logoText }}</BNavbarBrand>
     <BNavbarNav>
       <BNavItem v-for="link in navLinks" :key="link.href" :href="link.href">{{

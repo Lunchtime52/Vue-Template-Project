@@ -7,6 +7,7 @@
   >
     <b-card-title :style="{ fontSize: titleSize }">{{ title }}</b-card-title>
     <b-card-text :style="{ fontSize: textSize }">{{ text }}</b-card-text>
+    <slot></slot>
     <b-button v-if="buttonText" :variant="buttonVariant" :href="buttonHref">{{
       buttonText
     }}</b-button>

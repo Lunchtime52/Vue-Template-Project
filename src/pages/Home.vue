@@ -31,6 +31,30 @@
         </div>
       </div>
     </div>
+    <FeatureList
+      :features="[
+        { title: 'Feature 1', description: 'Description for Feature 1' },
+        {
+          title: 'Feature 2',
+          description: 'Description for Feature 2',
+          icon: 'bi-check-circle-fill',
+        },
+        {
+          title: 'Feature 3',
+          description: 'Description for Feature 3',
+          icon: 'bi-check-circle-fill',
+        },
+      ]"
+    />
+    <Gallery
+      :images="['https://placehold.co/300x400', 'https://placehold.co/300x400']"
+    />
+
+    <Testimonial
+      quote="This is a sample testimonial quote."
+      author="John Doe"
+      image="https://placehold.co/100x100"
+    />
   </div>
 </template>
 
@@ -38,12 +62,18 @@
 import Hero from "../components/Hero.vue";
 import ImageWithText from "../components/ImageWithText.vue";
 import Card from "../components/Card.vue";
+import FeatureList from "../components/FeatureList.vue";
+import Gallery from "../components/Gallery.vue";
+import Testimonial from "../components/Testimonial.vue";
 
 export default {
   components: {
     Hero,
     ImageWithText,
     Card,
+    FeatureList,
+    Gallery,
+    Testimonial
   },
 };
 </script>

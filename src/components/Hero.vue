@@ -1,5 +1,5 @@
 <template>
-  <div :class="`jumbotron text-center py-${padding} bg-${background}`">
+  <div :class="` text-center p-${padding} bg-${background} vh-75`">
     <h1 :style="{ fontSize: titleSize }">{{ title }}</h1>
     <p :style="{ fontSize: subtitleSize }">{{ subtitle }}</p>
     <b-button :variant="buttonVariant" :size="buttonSize" :href="buttonHref">{{
