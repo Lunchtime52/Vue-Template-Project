@@ -3,8 +3,8 @@
     logoText="My Awesome Site"
     :navLinks="[
       { text: 'Home', page: '/' },
-      { text: 'About', page: 'about' },
-      { text: 'Contact', page: 'contact' },
+      { text: 'About', page: '/about' },
+      { text: 'Contact', page: '/contact' },
     ]"
   />
   <div class="mx-auto container">
