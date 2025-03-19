@@ -32,7 +32,7 @@ function generateRoutes() {
 const routes = generateRoutes();
 
 const router = createRouter({
-  history: createWebHistory(base),
+  history: createWebHistory(),
   routes,
 });
 export default router;
