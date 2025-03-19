@@ -3,7 +3,7 @@
     
     <BNavbarBrand :href="logoHref">{{ logoText }}</BNavbarBrand>
     <BNavbarNav>
-      <BNavItem v-for="link in navLinks" :key="link.href" :href="link.href">{{
+      <BNavItem v-for="link in navLinks" :key="link.href" :href="link.page">{{
         link.text
       }}</BNavItem>
     </BNavbarNav>

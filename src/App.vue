@@ -2,9 +2,9 @@
   <Navbar
     logoText="My Awesome Site"
     :navLinks="[
-      { text: 'Home', href: '/' },
-      { text: 'About', href: '/about' },
-      { text: 'Contact', href: '/contact' },
+      { text: 'Home', page: '/' },
+      { text: 'About', page: 'about' },
+      { text: 'Contact', page: 'contact' },
     ]"
   />
   <div class="mx-auto container">
