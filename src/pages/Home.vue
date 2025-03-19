@@ -6,7 +6,7 @@
       buttonText="Explore Now"
       buttonHref="/contact"
       background="light"
-      padding="4"
+      :padding = "4"
     />
 
     <ImageWithText

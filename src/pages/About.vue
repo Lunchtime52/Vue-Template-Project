@@ -17,7 +17,7 @@
     :images="['https://placehold.co/300x400', 'https://placehold.co/300x400']"
   />
   <h2 class="text-center my-2 text-danger">Testimonial:</h2>
-  <Testimonial class="border border-danger"/>
+  <Testimonial class="border border-danger" quote="Awesome!" author="Me"/>
   <h2 class="text-center my-2 text-danger">Card:</h2>
   <Card class="border border-danger"/>
   <h2 class="text-center my-2 text-danger">Image with Text:</h2>
