@@ -1,18 +1,18 @@
-# Vue.js Project with Routing, Styling, and Vite
+# Vue 3 + Vite + Bootstrap Project Template
 
-This is a Vue.js project template designed to provide a robust foundation for building modern web applications. It comes with pre-configured routing, styling, and uses Vite for fast development and optimized builds.
+This project template offers a solid starting point for creating modern web applications with Vue 3, Vite, and Bootstrap. It includes pre-configured routing, styling with Bootstrap, and utilizes Vite for a fast development experience and optimized production builds.
 
 ## Features
 
 - **Vue.js 3:** Built with the latest version of Vue.js.
 - **Vue Router:** Pre-configured for client-side routing and navigation.
-- **UI Library:** Pre-configured with Vuetify 3.
-- **Styling:** Ready to use with Vuetify 3 to create beautiful and responsive user interfaces.
+- **UI Library:** Pre-configured with Bootstrap 5.
+- **Styling:** Ready to use with Bootstrap 5 for creating responsive and stylish user interfaces.
 - **State Management:** Ready for state management with Pinia.
 - **Linting:** ESLint and Prettier for consistent code style.
 - **Testing**: Vitest is configured for unit and component testing.
-- **Development Server:** Hot Module Replacement (HMR) for a smooth development experience.
-- **Build**: Optimized for production with Vite.
+- **Development Server:** Hot Module Replacement (HMR) for a seamless development experience.
+- **Build:** Optimized for production with Vite.
 
 ## Getting Started
 

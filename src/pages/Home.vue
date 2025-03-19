@@ -73,7 +73,7 @@ export default {
     Card,
     FeatureList,
     Gallery,
-    Testimonial
+    Testimonial,
   },
 };
 </script>

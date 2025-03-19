@@ -25,7 +25,7 @@ export default {
     buttonText: { type: String, default: null },
     buttonVariant: { type: String, default: "primary" },
     buttonHref: { type: String, default: "#" },
-    cardClass: { type: String, default: "" },
+    cardClass: { type: String, default: "border border-info" },
     titleSize: { type: String, default: "1.5rem" },
     textSize: { type: String, default: "1rem" },
   },

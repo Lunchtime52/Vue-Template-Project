@@ -2,9 +2,9 @@
   <div :class="` text-center p-${padding} bg-${background} vh-75`">
     <h1 :style="{ fontSize: titleSize }">{{ title }}</h1>
     <p :style="{ fontSize: subtitleSize }">{{ subtitle }}</p>
-    <b-button :variant="buttonVariant" :size="buttonSize" :href="buttonHref">{{
+    <BButton :variant="buttonVariant" :size="buttonSize" :href="buttonHref">{{
       buttonText
-    }}</b-button>
+    }}</BButton>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
     buttonText: { type: String, default: "Learn More" },
     buttonVariant: { type: String, default: "primary" },
     buttonSize: { type: String, default: "md" },
-    buttonHref: { type: String, default: "#" },
+    buttonHref: { type: String, default: "/" },
     padding: { type: Number, default: 5 },
     background: { type: String, default: "light" },
     titleSize: { type: String, default: "3rem" },

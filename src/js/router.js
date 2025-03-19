@@ -1,24 +1,37 @@
 import { createWebHistory, createRouter } from "vue-router";
 
 const base = "/";
-const routes = [
-  { path: "/", component: () => import("/src/pages/Home.vue"), name: "Home" },
-  {
-    path: "/contact",
-    component: () => import("/src/pages/Contact.vue"),
-    name: "Contact",
-  },
-  //   { path: "/services", component: () => import("./pages/Services.vue") },
-  {
-    path: "/:pathMatch(.*)*",
-    name: "NotFound",
-    component: () => import("/src/components/NotFound.vue"),
-  },
-];
+
+
+
+function generateRoutes() {
+  const pageFiles = import.meta.glob("/src/pages/*.vue");
+  const routes = [];
+
+  for (const path in pageFiles) {
+    const componentName = path.split("/").pop().replace(".vue", "");
+    const routePath = componentName === "Home" ? "/" : `/${componentName.toLowerCase()}`;
+
+    routes.push({
+      path: routePath,
+      component: pageFiles[path],
+      name: componentName,
+    });
+  }
+  
+  routes.push({
+      path: "/:pathMatch(.*)*",
+      name: "NotFound",
+      component: () => import("/src/pages/NotFound.vue"),
+    });
+
+  return routes;
+}
+
+const routes = generateRoutes();
 
 const router = createRouter({
   history: createWebHistory(base),
   routes,
 });
-
 export default router;

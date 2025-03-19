@@ -1,29 +1,81 @@
 <template>
-  <form class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
-    <div class="mb-4">
-      <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
-      <input type="text" id="name" v-model="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" placeholder="Your Name" />
-    </div>
-    <div class="mb-4">
-      <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-      <input type="email" id="email" v-model="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" placeholder="Your Email" />
-    </div>
-    <div class="mb-6">
-      <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
-      <textarea id="message" v-model="message" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" rows="4" placeholder="Your Message"></textarea>
-    </div>
-    <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">Submit</button>
-  </form>
+  <div class="d-flex justify-content-center my-4">
+    <form class="bg-white p-8 rounded-lg shadow-md w-75">
+      <h2 class="mb-4 text-center">{{ title }}</h2>
+
+      <div class="mb-3 row">
+        <!-- <label for="name" class="col-sm-2 col-form-label text-start"
+          >Name</label
+        > -->
+        <div class="col-lg-8 mx-auto">
+          <input
+            type="text"
+            id="name"
+            v-model="name"
+            class="form-control"
+            placeholder="Your Name"
+          />
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <!-- <label for="email" class="col-sm-2 col-form-label text-start"
+          >Email</label
+        > -->
+        <div class="col-lg-8 mx-auto">
+          <input
+            type="email"
+            id="email"
+            v-model="email"
+            class="form-control"
+            placeholder="Your Email"
+          />
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <!-- <label for="message" class="col-sm-2 col-form-label text-start"
+          >Message</label
+        > -->
+        <div class="col-lg-8 mx-auto">
+          <textarea
+            id="message"
+            v-model="message"
+            class="form-control"
+            rows="4"
+            placeholder="Your Message"
+          ></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary d-grid col-6 mx-auto">
+        {{ buttonText }}
+      </button>
+    </form>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'ContactForm',
+  name: "ContactForm",
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+    buttonText: {
+      type: String,
+      required: true,
+    },
+    buttonHref: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
-      name: '',
-      email: '',
-      message: '',
+      name: "",
+      email: "",
+      message: "",
     };
   },
 };

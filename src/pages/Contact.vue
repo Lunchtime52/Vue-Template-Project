@@ -25,15 +25,24 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <ContactForm
+        title="Contact Us"
+        buttonText="Submit"
+        buttonHref="/contact"
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import ImageWithText from "../components/ImageWithText.vue";
+import ContactForm from "../components/ContactForm.vue";
 
 export default {
   components: {
     ImageWithText,
+    ContactForm,
   },
 };
 </script>
