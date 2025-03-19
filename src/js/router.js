@@ -2,7 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 
 
 
-const base = import.meta.env.MODE === 'production' ? '/vue-template/' : '/';
+const base = '/vue-template/';
 
 
 function generateRoutes() {
@@ -14,7 +14,7 @@ function generateRoutes() {
     const routePath = componentName === "Home" ? "/" : `/${componentName.toLowerCase()}`;
 
     routes.push({
-      path: routePath,
+      path: base.concat(routePath),
       component: pageFiles[path],
       name: componentName,
     });

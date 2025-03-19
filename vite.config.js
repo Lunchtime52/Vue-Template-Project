@@ -5,7 +5,7 @@ import { BootstrapVueNextResolver } from "bootstrap-vue-next";
 
 export default defineConfig(({ mode }) => {
   return {
-    base: mode === "production" ? "/vue-template/" : "/",
+    base: "/vue-template/",
     plugins: [
       vue(),
       Components({
