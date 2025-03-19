@@ -7,9 +7,9 @@
       { text: 'Contact', href: '/contact' },
     ]"
   />
-<div class="mx-auto container">
-  <router-view ></router-view>
-</div>
+  <div class="mx-auto container">
+    <router-view></router-view>
+  </div>
   <Footer
     :footerLinks="[
       // { text: 'Privacy', href: '/privacy' },
