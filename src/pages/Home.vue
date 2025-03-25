@@ -4,7 +4,7 @@
       title="Welcome to Our Site!"
       subtitle="Sample Subtitle"
       buttonText="Explore Now"
-      buttonHref="/contact"
+      buttonHref="Contact"
       background="light"
       :padding = "4"
     />
@@ -26,7 +26,7 @@
             imgSrc="https://placehold.co/300x200"
             imgAlt="Card Image"
             buttonText="Read More"
-            buttonHref="/card-details"
+            
           />
         </div>
       </div>

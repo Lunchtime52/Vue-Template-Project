@@ -8,7 +8,7 @@
     <b-card-title :style="{ fontSize: titleSize }">{{ title }}</b-card-title>
     <b-card-text :style="{ fontSize: textSize }">{{ text }}</b-card-text>
     <slot></slot>
-    <b-button v-if="buttonText" :variant="buttonVariant" :href="buttonHref">{{
+    <b-button v-if="buttonText" :variant="buttonVariant" :to="{name:buttonHref}">{{
       buttonText
     }}</b-button>
   </b-card>
@@ -24,7 +24,7 @@ export default {
     imgTop: { type: Boolean, default: true },
     buttonText: { type: String, default: null },
     buttonVariant: { type: String, default: "primary" },
-    buttonHref: { type: String, default: "#" },
+    buttonHref: { type: String, default: "NotFound" },
     cardClass: { type: String, default: "border border-info" },
     titleSize: { type: String, default: "1.5rem" },
     textSize: { type: String, default: "1rem" },

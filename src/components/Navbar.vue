@@ -1,11 +1,11 @@
 <template>
   <BNavbar toggable="md" :type="variant" :variant="color" class="px-4 mb-2">
-    <BNavbarBrand :href="logoHref">{{ logoText }}</BNavbarBrand>
+    <BNavbarBrand :to="{name:logoHref}">{{ logoText }}</BNavbarBrand>
     <BNavbarNav>
       <BNavItem
         v-for="link in navLinks"
         :key="link.href"
-        :to="base.concat(link.page)"
+        :to="{name:link.href}"
         >{{ link.text }}</BNavItem
       >
     </BNavbarNav>
@@ -16,7 +16,7 @@
 export default {
   props: {
     logoText: { type: String, default: "My Site" },
-    logoHref: { type: String, default: "/" },
+    logoHref: { type: String, default: "Home" },
     navLinks: { type: Array, default: () => [] },
     variant: { type: String, default: "dark" },
     color: { type: String, default: "info" },
