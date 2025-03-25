@@ -1,15 +1,15 @@
 <template>
-  <div>
+  <div >
     <Hero
-      title="Welcome to Our Site!"
-      subtitle="Sample Subtitle"
-      buttonText="Explore Now"
-      buttonHref="Contact"
-      background="light"
-      :padding = "4"
-    />
-
-    <ImageWithText
+        title="Welcome to Our Site!"
+        subtitle="Sample Subtitle"
+        buttonText="Explore Now"
+        buttonHref="Contact"
+        :padding="4"
+        imageUrl="https://placehold.co/1600x900"
+      />
+    
+      <ImageWithText
       imageUrl="https://placehold.co/800x400"
       title="Our Featured Product"
       text="This is a brief description of our featured product. It's awesome!"
@@ -17,18 +17,16 @@
       textClass="col-md-6"
     />
 
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-4 mb-4" v-for="n in 3" :key="n">
-          <Card
-            title="Card Title"
-            text="Quick example text."
-            imgSrc="https://placehold.co/300x200"
-            imgAlt="Card Image"
-            buttonText="Read More"
-            
-          />
-        </div>
+    <div class="row mt-5">
+      <div class="col-md-4 mb-4" v-for="n in 3" :key="n">
+        <Card
+          title="Card Title"
+          text="Quick example text."
+          imgSrc="https://placehold.co/300x200"
+          imgAlt="Card Image"
+          buttonText="Read More"
+          
+        />
       </div>
     </div>
     <FeatureList
@@ -58,22 +56,27 @@
   </div>
 </template>
 
-<script>
-import Hero from "../components/Hero.vue";
-import ImageWithText from "../components/ImageWithText.vue";
-import Card from "../components/Card.vue";
-import FeatureList from "../components/FeatureList.vue";
-import Gallery from "../components/Gallery.vue";
-import Testimonial from "../components/Testimonial.vue";
-
-export default {
-  components: {
-    Hero,
-    ImageWithText,
-    Card,
-    FeatureList,
-    Gallery,
-    Testimonial,
-  },
-};
-</script>
+    <script>
+    import Hero from "../components/Hero.vue";
+    import ImageWithText from "../components/ImageWithText.vue";
+    import Card from "../components/Card.vue";
+    import FeatureList from "../components/FeatureList.vue";
+    import Gallery from "../components/Gallery.vue";
+    import Testimonial from "../components/Testimonial.vue";
+    
+    export default {
+      components: {
+        Hero,
+        ImageWithText,
+        Card,
+        FeatureList,
+        Gallery,
+        Testimonial,
+      },
+    };
+    </script>
+    <style scoped>
+  *{
+    margin-bottom: 20px;
+  }
+  </style>

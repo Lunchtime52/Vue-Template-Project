@@ -1,17 +1,17 @@
 <template>
-  <b-card
+  <BCard
     :img-src="imgSrc"
     :img-alt="imgAlt"
     :img-top="imgTop"
     :class="cardClass"
   >
-    <b-card-title :style="{ fontSize: titleSize }">{{ title }}</b-card-title>
-    <b-card-text :style="{ fontSize: textSize }">{{ text }}</b-card-text>
+    <BCard-title :style="{ fontSize: titleSize }">{{ title }}</BCard-title>
+    <BCard-text :style="{ fontSize: textSize }">{{ text }}</BCard-text>
     <slot></slot>
-    <b-button v-if="buttonText" :variant="buttonVariant" :to="{name:buttonHref}">{{
+    <BButton v-if="buttonText" :variant="buttonVariant" :to="{name:buttonHref}">{{
       buttonText
-    }}</b-button>
-  </b-card>
+    }}</BButton>
+  </BCard>
 </template>
 
 <script>

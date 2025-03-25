@@ -1,5 +1,5 @@
 <template>
-  <BNavbar toggable="md" :type="variant" :variant="color" class="px-4 mb-2">
+  <BNavbar toggable="md" :type="variant" :variant="color" class="px-4 ">
     <BNavbarBrand :to="{name:logoHref}">{{ logoText }}</BNavbarBrand>
     <BNavbarNav>
       <BNavItem
