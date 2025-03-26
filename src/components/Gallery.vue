@@ -1,8 +1,16 @@
 <template>
-  <BContainer fluid>
-    <BRow >
-      <BCol v-for="(imageUrl, index) in images" :key="index" class="text-center">
-        <BImg :src="imageUrl" fluid alt="Gallery Image" />
+  <BContainer fluid class="p-2">
+    <BRow>
+      <BCol
+        v-for="(imageUrl, index) in images"
+        :key="index"
+        class="text-center"
+      >
+        <BImg
+          :src="imageUrl"
+          alt="Gallery Image"
+          :class="['customMargin', galleryMargin]"
+        />
       </BCol>
     </BRow>
   </BContainer>
@@ -15,5 +23,6 @@ defineProps({
     required: true,
     default: () => [],
   },
+  galleryMargin: { type: String, default: "mb-4" },
 });
 </script>

@@ -1,14 +1,13 @@
 <template>
-  <div >
+  
     <Hero
         title="Welcome to Our Site!"
         subtitle="Sample Subtitle"
         buttonText="Explore Now"
         buttonHref="Contact"
-        :padding="4"
         imageUrl="https://placehold.co/1600x900"
       />
-    
+    <BContainer class="section-padding">
       <ImageWithText
       imageUrl="https://placehold.co/800x400"
       title="Our Featured Product"
@@ -17,30 +16,31 @@
       textClass="col-md-6"
     />
 
-    <div class="row mt-5">
-      <div class="col-md-4 mb-4" v-for="n in 3" :key="n">
+    <BRow mt-5 gap-4>
+      <BCol md=4 mb-md-4 v-for="n in 6" :key="n">
         <Card
           title="Card Title"
           text="Quick example text."
           imgSrc="https://placehold.co/300x200"
           imgAlt="Card Image"
+          cardMargin="mb-4"
           buttonText="Read More"
           
         />
-      </div>
-    </div>
+      </BCol>
+    </BRow>
     <FeatureList
       :features="[
-        { title: 'Feature 1', description: 'Description for Feature 1' },
+        { title: 'Feature 1', description: 'Description for Feature 1', icon:'bi-1-square'},
         {
           title: 'Feature 2',
           description: 'Description for Feature 2',
-          icon: 'bi-check-circle-fill',
+          icon: 'bi-2-square',
         },
         {
           title: 'Feature 3',
           description: 'Description for Feature 3',
-          icon: 'bi-check-circle-fill',
+          icon: 'bi-3-square',
         },
       ]"
     />
@@ -53,7 +53,7 @@
       author="John Doe"
       image="https://placehold.co/100x100"
     />
-  </div>
+  </BContainer>
 </template>
 
     <script>
@@ -75,8 +75,3 @@
       },
     };
     </script>
-    <style scoped>
-  *{
-    margin-bottom: 20px;
-  }
-  </style>

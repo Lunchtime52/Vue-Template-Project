@@ -1,13 +1,15 @@
 <template>
-  <div class="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col items-center">
-    <img v-if="image" :src="image" :alt="author" class="w-24 h-24 rounded-full object-cover mb-4" />
-    <blockquote class="text-gray-700 text-center mb-4">
-      <p class="italic">"{{ quote }}"</p>
-    </blockquote>
-    <p class="text-gray-600 font-semibold">{{ author }}</p>
-  </div>
+  <BContainer class="section-padding">
+    <div class="bg-light p-5 rounded-lg shadow-md d-flex flex-column align-items-center">
+      <img v-if="image" :src="image" :alt="author" class="w-25 h-25 rounded-full object-cover mb-4" />
+      <blockquote class="text-secondary text-center mb-4">
+        <p class="italic">"{{ quote }}"</p>
+      </blockquote>
+      <p class="text-muted fw-semibold">{{ author }}</p>
+    </div>
+  </BContainer>
 </template>
-
+  
 <script>
 export default {
   name: 'Testimonial',

@@ -1,57 +1,60 @@
 <template>
-  <div class="d-flex justify-content-center my-4">
-    <form class="bg-white p-8 rounded-lg shadow-md w-75">
-      <h2 class="mb-4 text-center">{{ title }}</h2>
+  <BContainer class="my-4 section-padding">
+    <form class="bg-white p-5 rounded-lg shadow-md col-md-8">
+      <h2 class="mb-4">{{ title }}</h2>
 
-      <div class="mb-3 row">
+      <BRow class="mb-3">
         <!-- <label for="name" class="col-sm-2 col-form-label text-start"
           >Name</label
         > -->
-        <div class="col-lg-8 mx-auto">
-          <input
-            type="text"
+        <BCol>
+          <BFormGroup>
+          <BFormInput
+            type="text"          
             id="name"
             v-model="name"
-            class="form-control"
             placeholder="Your Name"
           />
-        </div>
-      </div>
+          </BFormGroup>
+        </BCol>
+      </BRow>
 
-      <div class="mb-3 row">
+      <BRow class="mb-3">
         <!-- <label for="email" class="col-sm-2 col-form-label text-start"
           >Email</label
         > -->
-        <div class="col-lg-8 mx-auto">
-          <input
+        <BCol>
+          <BFormGroup>
+          <BFormInput
             type="email"
             id="email"
             v-model="email"
-            class="form-control"
             placeholder="Your Email"
           />
-        </div>
-      </div>
+          </BFormGroup>
+        </BCol>
+      </BRow>
 
-      <div class="mb-3 row">
+      <BRow class="mb-3">
         <!-- <label for="message" class="col-sm-2 col-form-label text-start"
           >Message</label
         > -->
-        <div class="col-lg-8 mx-auto">
-          <textarea
+        <BCol>
+          <BFormGroup>
+          <BFormTextarea
             id="message"
             v-model="message"
-            class="form-control"
             rows="4"
             placeholder="Your Message"
-          ></textarea>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary d-grid col-6 mx-auto">
+          ></BFormTextarea>
+          </BFormGroup>
+        </BCol>
+      </BRow>
+      <BButton block variant="primary" type="submit">
         {{ buttonText }}
-      </button>
+      </BButton>
     </form>
-  </div>
+  </BContainer>
 </template>
 
 <script>

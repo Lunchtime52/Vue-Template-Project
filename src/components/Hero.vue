@@ -1,12 +1,22 @@
 <template>
   <div
-    :class="`p-${padding} bg-${background} custom-vh-75 text-white hero text-center`"
-    :style="{ backgroundImage: `url(${imageUrl})` }"
+    :class="` bg-${background}  text-white hero text-center w-100`"
+    :style="{
+      backgroundImage: `radial-gradient(closest-side, rgba(0, 0, 0, 0.7),transparent), url(${imageUrl}) `,
+      height: '75vh',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center'
+    }"
   >
-    <div class="hero-overlay ">
-      <h1 :style="{ fontSize: titleSize }">{{ title }}</h1>
-      <p :style="{ fontSize: subtitleSize }">{{ subtitle }}</p>
+    <div
+      class="  d-flex flex-column justify-content-center align-items-center"
+      :style="{height:'75vh'}"
+    >
+      <h1 :class="`display-${titleScale}`">{{ title }}</h1>
+      <p v-if="subtitle" :class="`fs-${subtitleScale}`">{{ subtitle }}</p>
       <BButton
+        v-if="buttonText"
         :variant="buttonVariant"
         :size="buttonSize"
         :to="{ name: buttonHref }"
@@ -19,41 +29,22 @@
 
 <script setup>
 const props = defineProps({
-  title: { type: String, default: "Welcome!" },
-  subtitle: { type: String, default: "A simple hero unit." },
-  buttonText: { type: String, default: "Learn More" },
-  buttonVariant: { type: String, default: "primary" },
-  buttonSize: { type: String, default: "md" },
-  buttonHref: { type: String, default: "Contact" },
-  padding: { type: Number, default: 5 },
-  background: { type: String, default: "light" },
-  titleSize: { type: String, default: "3rem" },
-  subtitleSize: { type: String, default: "1.5rem" },
-  imageUrl: { type: String, required: false },
+  title: { type: String, required: true },
+  subtitle: { type: String, required: false, default: "" },
+  buttonText: { type: String, required: false },
+  buttonVariant: { type: String, required: false, default: "primary" },
+  buttonSize: { type: String, required: false, default: "md" },
+  buttonHref: { type: String, required: false, default: "Contact" },
+  padding: { type: Number, required: false, default: 5 },
+  background: { type: String, required: false, default: "light" },
+  titleScale: { type: Number, required: false, default: 3 },
+  subtitleScale: { type: Number, required: false, default: 5 },
+  imageUrl: { type: String, required: false, default: "" },
 });
 </script>
 
 <style scoped>
 .hero {
-  background-size: cover;
-  background-position: center;
   position: relative;
-}
-.custom-vh-75 {
-  height: 75vh;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
 }
 </style>

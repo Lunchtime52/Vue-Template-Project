@@ -1,14 +1,17 @@
 <template>
-  <BNavbar toggable="md" :type="variant" :variant="color" class="px-4 ">
-    <BNavbarBrand :to="{name:logoHref}">{{ logoText }}</BNavbarBrand>
-    <BNavbarNav>
-      <BNavItem
-        v-for="link in navLinks"
-        :key="link.href"
-        :to="{name:link.href}"
-        >{{ link.text }}</BNavItem
-      >
-    </BNavbarNav>
+  <BNavbar toggleable="md" :type="variant" :variant="color" class="px-4">
+    <BNavbarBrand :to="{ name: logoHref }">{{ logoText }}</BNavbarBrand>
+    <BNavbarToggle target="nav-collapse" />
+    <BCollapse id="nav-collapse" is-nav>
+      <BNavbarNav class="ms-auto text-end">
+        <BNavItem
+          v-for="link in navLinks"
+          :key="link.href"
+          :to="{ name: link.href }"
+          >{{ link.text }}
+        </BNavItem>
+      </BNavbarNav>
+    </BCollapse>
   </BNavbar>
 </template>
 

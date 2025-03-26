@@ -1,37 +1,46 @@
 <template>
-  <BCard
-    :img-src="imgSrc"
-    :img-alt="imgAlt"
-    :img-top="imgTop"
-    :class="cardClass"
-  >
-    <BCard-title :style="{ fontSize: titleSize }">{{ title }}</BCard-title>
-    <BCard-text :style="{ fontSize: textSize }">{{ text }}</BCard-text>
+
+  <BCard v-if="imgSrc || imgAlt || imgTop" :class="['customMargin', cardMargin]">
+ <template #header>
+      <BImg v-if="imgSrc" :src="imgSrc" :alt="imgAlt" :top="imgTop" fluid />
+    </template>
+    <BCard-title :class="`fs-${titleScale}`">{{ title }}</BCard-title>
+    <BCard-text :class="`fs-${textScale}`">{{ text }}</BCard-text>
     <slot></slot>
-    <BButton v-if="buttonText" :variant="buttonVariant" :to="{name:buttonHref}">{{
-      buttonText
-    }}</BButton>
+    <BButton
+      v-if="buttonText"
+      :variant="buttonVariant"
+      :to="{ name: buttonHref }"
+      >{{ buttonText }}</BButton
+    >
+  </BCard>
+  <BCard v-else  :class="['customMargin', cardMargin]">
+<BCard-title :class="`fs-${titleScale}`">{{ title }}</BCard-title>
+    <BCard-text :class="`fs-${textScale}`">{{ text }}</BCard-text>
+    <slot></slot>
+    <BButton
+      v-if="buttonText"
+      :variant="buttonVariant"
+      :to="{ name: buttonHref }"
+      >{{ buttonText }}</BButton
+    >
   </BCard>
 </template>
 
 <script>
 export default {
   props: {
-    title: { type: String, default: "Card Title" },
-    text: { type: String, default: "Some example text." },
-    imgSrc: { type: String, default: null },
-    imgAlt: { type: String, default: null },
-    imgTop: { type: Boolean, default: true },
-    buttonText: { type: String, default: null },
-    buttonVariant: { type: String, default: "primary" },
-    buttonHref: { type: String, default: "NotFound" },
-    cardClass: { type: String, default: "border border-info" },
-    titleSize: { type: String, default: "1.5rem" },
-    textSize: { type: String, default: "1rem" },
+    title: { type: String, default: 'Card Title' },
+    text: { type: String, default: 'Some example text.' },
+    imgSrc: { type: String, required: false },
+    imgAlt: { type: String, required: false },
+    imgTop: { type: Boolean, default: false },
+    buttonText: { type: String, required: false },
+    buttonVariant: { type: String, default: 'success' },
+    buttonHref: { type: String, default: 'NotFound' },
+    titleScale: { type: Number, default: 4 },
+    textScale: { type: Number, default: 5 },
+    cardMargin: { type: String, default: '' },
   },
 };
 </script>
-
-<style scoped>
-/* Optional: Add component-specific styles here */
-</style>

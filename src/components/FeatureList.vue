@@ -1,13 +1,17 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <div v-for="(feature, index) in features" :key="index" class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
-      <div class="text-blue-500 mb-4 text-4xl">
-        <span :class="[feature.icon]"></span>
-      </div>
-      <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ feature.title }}</h3>
-      <p class="text-gray-600 text-center">{{ feature.description }}</p>
-    </div>
-  </div>
+  <BContainer class="section-padding">
+    <BRow class="gap-8">
+      <BCol v-for="(feature, index) in features" :key="index" cols="12" md="6" lg="4">
+        <div class="bg-white rounded-lg shadow-md p-5 d-flex flex-column align-items-center">
+          <div class="text-primary mb-2 fs-1">
+            <span :class="[feature.icon]"></span>
+          </div>
+          <h3 class="fs-5 fw-semibold text-dark mb-2">{{ feature.title }}</h3>
+          <p class="text-secondary text-center">{{ feature.description }}</p>
+        </div>
+      </BCol>
+    </BRow>
+  </BContainer>
 </template>
 
 <script setup>

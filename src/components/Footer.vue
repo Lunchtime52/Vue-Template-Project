@@ -1,5 +1,5 @@
 <template>
-  <footer :class="`text-center py-${padding} bg-${background} px-4 mt-5`">
+  <footer :class="`text-center py-${padding} bg-${background} px-4 mt-5 section-padding`">
     <p>{{ copyright }}</p>
     <div v-if="footerLinks.length">
       <a
@@ -28,5 +28,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
