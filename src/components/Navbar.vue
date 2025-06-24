@@ -1,5 +1,5 @@
 <template>
-  <BNavbar toggleable="md" :type="variant" :variant="color" class="px-4">
+  <BNavbar toggleable="md" :type="variant" :variant="color" class="px-5" sticky="top">
     <BNavbarBrand :to="{ name: logoHref }">{{ logoText }}</BNavbarBrand>
     <BNavbarToggle target="nav-collapse" />
     <BCollapse id="nav-collapse" is-nav>

@@ -59,7 +59,7 @@
       </BCol>
     </BRow>
     <h2 class="text-center my-2 text-danger">Image with Text:</h2>
-    <ImageWithText class="border border-danger" />
+    <ImageWithText class="border border-danger" layoutDirection="image-right"/>
   </BContainer>
 </template>
 
