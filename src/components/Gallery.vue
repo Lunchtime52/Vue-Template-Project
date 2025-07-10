@@ -1,19 +1,15 @@
 <template>
-  <BContainer fluid class="p-2">
-    <BRow>
-      <BCol
-        v-for="(imageUrl, index) in images"
-        :key="index"
-        class="text-center"
-      >
-        <BImg
+  <div class="container-fluid p-2">
+    <div class="row">
+      <div v-for="(imageUrl, index) in images" :key="index" class="col text-center">
+        <img
           :src="imageUrl"
           alt="Gallery Image"
           :class="['customMargin', galleryMargin]"
         />
-      </BCol>
-    </BRow>
-  </BContainer>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>

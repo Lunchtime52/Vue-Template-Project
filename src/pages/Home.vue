@@ -7,7 +7,7 @@
         buttonHref="Contact"
         imageUrl="https://placehold.co/1600x900"
       />
-    <BContainer class="section-padding">
+    <div class="container section-padding">
       <ImageWithText
       imageUrl="https://placehold.co/800x400"
       title="Our Featured Product"
@@ -16,8 +16,8 @@
       textClass="col-md-6"
     />
 
-    <BRow mt-5 gap-4>
-      <BCol md=4 mb-md-4 v-for="n in 6" :key="n">
+    <div class="row mt-5 gap-4">
+      <div class="col-md-4 mb-md-4" v-for="n in 6" :key="n">
         <Card
           title="Card Title"
           text="Quick example text."
@@ -27,8 +27,8 @@
           buttonText="Read More"
           
         />
-      </BCol>
-    </BRow>
+      </div>
+    </div>
     <FeatureList
       :features="[
         { title: 'Feature 1', description: 'Description for Feature 1', icon:'bi-1-square'},
@@ -53,7 +53,7 @@
       author="John Doe"
       image="https://placehold.co/100x100"
     />
-  </BContainer>
+  </div>
 </template>
 
     <script>
