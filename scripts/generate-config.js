@@ -1,6 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const packageJson = require('../package.json');
+import fs from 'fs';
+import path from 'path';
+import packageJson from '../package.json' assert { type: 'json' };
+
+import { fileURLToPath } from 'url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const projectInfo = packageJson.projectInfo || {};
 
@@ -12,11 +15,17 @@ const configContent = `
 // This file is generated during the build process
 export const PROJECT_NAME = '${projectName}';
 export const BUSINESS_NAME = '${businessName}';
-export const BASE_URL = '${baseUrl}';
+export const baseUrl = '${baseUrl}';
 // Add other variables from packageJson.projectInfo as needed
 `;
 
-const configFilePath = path.resolve(__dirname, '../src/config/index.js');
+const configDir = path.resolve(__dirname, '../src/config');
+const configFilePath = path.join(configDir, 'index.js');
+
+// Create the config directory if it doesn't exist
+if (!fs.existsSync(configDir)) {
+  fs.mkdirSync(configDir, { recursive: true });
+}
 
 fs.writeFileSync(configFilePath, configContent.trim());
 

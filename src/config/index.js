@@ -1,0 +1,5 @@
+// This file is generated during the build process
+export const PROJECT_NAME = 'My Awesome Vue Project';
+export const BUSINESS_NAME = 'Innovative Solutions Inc.';
+export const baseUrl = '/Vue-Template-Project';
+// Add other variables from packageJson.projectInfo as needed

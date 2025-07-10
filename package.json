@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/generate-config.js && vite build",
     "preview": "vite preview",
     "predeploy": "npm run build && echo '/* /index.html  200' > dist/_redirects",
     "deploy": "gh-pages -d dist"
@@ -27,6 +27,6 @@
   "projectInfo": {
     "projectName": "My Awesome Vue Project",
     "businessName": "Innovative Solutions Inc.",
-    "baseUrl": "https://mywebsite.com/"
+    "baseUrl": "/Vue-Template-Project"
   }
 }
