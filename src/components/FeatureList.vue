@@ -1,9 +1,9 @@
 <!-- @format -->
 
 <template>
-	<BContainer class="section-padding">
-		<BRow class="gap-8">
-			<BCol
+	<div class="container section-padding">
+		<div class="row gap-8">
+			<div
 				v-for="(feature, index) in features"
 				:key="index">
 				<div
@@ -18,9 +18,9 @@
 						{{ feature.description }}
 					</p>
 				</div>
-			</BCol>
-		</BRow>
-	</BContainer>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script setup>
