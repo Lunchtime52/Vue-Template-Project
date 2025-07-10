@@ -1,7 +1,7 @@
 <template>
   
     <Hero
-        title="Welcome to Our Site!"
+        :title="'Welcome to '+ PROJECT_NAME +' ! '"
         subtitle="Sample Subtitle"
         buttonText="Explore Now"
         buttonHref="Contact"
@@ -63,6 +63,7 @@
     import FeatureList from "../components/FeatureList.vue";
     import Gallery from "../components/Gallery.vue";
     import Testimonial from "../components/Testimonial.vue";
+    import { PROJECT_NAME } from "../config";
     
     export default {
       components: {
@@ -73,5 +74,11 @@
         Gallery,
         Testimonial,
       },
+      data() {
+        return {
+          PROJECT_NAME, // Make PROJECT_NAME available in the template
+        };
+      },
+      
     };
     </script>
