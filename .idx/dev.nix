@@ -16,12 +16,16 @@
       "esbenp.prettier-vscode"
       "kuba-p.theme-pink-candy"
     ];
+
     workspace = {
+
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
         npm-install = "npm ci --no-audit --prefer-offline --no-progress --timing";
         # Open editors for the following files by default, if they exist:
         default.openFiles = [ "src/App.vue" ];
+
+
       };
       # To run something each time the workspace is (re)started, use the `onStart` hook
     };
@@ -32,6 +36,7 @@
         web = {
           command = [ "npm" "run" "dev" "--" "--port" "$PORT" "--host" "0.0.0.0" ];
           manager = "web";
+
         };
       };
     };

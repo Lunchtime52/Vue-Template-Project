@@ -2,7 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 
 
 
-const base = '/Vue-Template-Project';
+import { baseUrl as base } from '../config/index.js';
 
 
 function generateRoutes() {
@@ -14,7 +14,7 @@ function generateRoutes() {
     const routePath = componentName === "Home" ? "/" : `/${componentName.toLowerCase()}`;
 
     routes.push({
-      path: base.concat(routePath),
+ path: routePath,
       component: pageFiles[path],
       name: componentName,
     });
@@ -32,7 +32,7 @@ function generateRoutes() {
 const routes = generateRoutes();
 
 const router = createRouter({
-  history: createWebHistory(),
+ history: createWebHistory(base),
   routes,
 });
 export default router;
