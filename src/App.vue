@@ -1,6 +1,16 @@
+<script>
+import { PROJECT_NAME } from "./config";
+export default {
+	data() {
+		return {
+			projectName: PROJECT_NAME,
+		};
+	},
+};
+</script>
 <template>
 	<Navbar
-		logoText="My Awesome Site"
+		:logoText="projectName"
 		:navLinks="[
 			{ text: 'Home', href: 'Home' },
 			{ text: 'About', href: 'About' },

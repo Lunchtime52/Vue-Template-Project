@@ -9,5 +9,13 @@
 	"diffEditor.codeLens": true,
 	"html.format.indentInnerHtml": true,
 	"prettier.useTabs": true,
-	"remoteHub.commitDirectlyWarning": "auto"
+	"remoteHub.commitDirectlyWarning": "auto",
+	"files.exclude": {
+		".github": true,
+		".idx": true,
+		".vscode": true,
+		"dist": true,
+		"node_modules": true,
+		"public": true
+	}
 }
