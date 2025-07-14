@@ -1,5 +1,3 @@
-<!-- @format -->
-
 <template>
 	<Navbar
 		logoText="My Awesome Site"
@@ -19,7 +17,3 @@
 		]"
 	/>
 </template>
-
-<style src="./assets/custom.scss"></style>
-
-<style scoped></style>

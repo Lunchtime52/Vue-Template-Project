@@ -23,6 +23,7 @@ export default {
     navLinks: { type: Array, default: () => [] },
     variant: { type: String, default: "dark" },
     color: { type: String, default: "info" },
+    //change with base form config.js
     base: { type: String, default: "/Vue-Template-Project" },
   },
 };
