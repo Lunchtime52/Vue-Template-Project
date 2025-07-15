@@ -33,5 +33,8 @@ export default defineConfig(({ mode }) => {
 				},
 			},
 		],
+		optimizeDeps: {
+			exclude: ["vue-components"],
+		},
 	};
 });

@@ -2,4 +2,9 @@
 export const PROJECT_NAME = 'My Awesome Vue Project';
 export const BUSINESS_NAME = 'Innovative Solutions Inc.';
 export const baseUrl = '/Vue-Template-Project';
+export default{
+  PROJECT_NAME:PROJECT_NAME,
+  BUSINESS_NAME:BUSINESS_NAME,
+  baseUrl:baseUrl,
+};
 // Add other variables from packageJson.projectInfo as needed

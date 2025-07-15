@@ -59,7 +59,6 @@
 </template>
 
 <script>
-import Hero from "../components/Hero.vue";
 import ImageWithText from "../components/ImageWithText.vue";
 import Card from "../components/Card.vue";
 import FeatureList from "../components/FeatureList.vue";
@@ -69,7 +68,6 @@ import { PROJECT_NAME, BUSINESS_NAME } from "../config";
 
 export default {
 	components: {
-		Hero,
 		ImageWithText,
 		Card,
 		FeatureList,
