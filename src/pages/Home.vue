@@ -59,21 +59,9 @@
 </template>
 
 <script>
-import ImageWithText from "../components/ImageWithText.vue";
-import Card from "../components/Card.vue";
-import FeatureList from "../components/FeatureList.vue";
-import Gallery from "../components/Gallery.vue";
-import Testimonial from "../components/Testimonial.vue";
 import { PROJECT_NAME, BUSINESS_NAME } from "../config";
 
 export default {
-	components: {
-		ImageWithText,
-		Card,
-		FeatureList,
-		Gallery,
-		Testimonial,
-	},
 	data() {
 		return {
 			// Make PROJECT_NAME available in the template

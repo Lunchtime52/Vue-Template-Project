@@ -37,13 +37,5 @@
 </template>
 
 <script>
-import ImageWithText from "../components/ImageWithText.vue";
-import ContactForm from "../components/ContactForm.vue";
 
-export default {
-	components: {
-		ImageWithText,
-		ContactForm,
-	},
-};
 </script>

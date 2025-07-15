@@ -11,6 +11,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { createBootstrap } from "bootstrap-vue-next";
 import "bootstrap-vue-next/dist/bootstrap-vue-next.css";
 
+
 const app = createApp(App);
 app.provide("config", config);
 app.use(myLibrary);
