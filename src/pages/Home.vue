@@ -4,29 +4,29 @@
 		:subtitle="BUSINESS_NAME"
 		buttonText="Explore Now"
 		buttonHref="Contact"
-		imageUrl="https://placehold.co/1600x900"
+		imageUrl="./src/assets/imgs/hero-image.png"
 	/>
-	<div class="container section-padding">
-		<ImageWithText
-			imageUrl="https://placehold.co/800x400"
-			title="Our Featured Product"
-			text="This is a brief description of our featured product. It's awesome!"
-			imageClass="col-md-6"
-			textClass="col-md-6"
-		/>
+	<!-- <div class="container section-padding"> -->
+	<ImageWithText
+		imageUrl="./src/assets/imgs/SmartBase.png"
+		title="SmartBase"
+		text="A sleek, wireless charging pad that adapts to power any device placed on it. Simple and efficient charging."
+		imageClass="col-md-6"
+		textClass="col-md-6"
+	/>
 
-		<div class="row mt-5 gap-4">
-			<div class="col-md-4 mb-md-4" v-for="n in 6" :key="n">
-				<Card
-					title="Card Title"
-					text="Quick example text."
-					imgSrc="https://placehold.co/300x200"
-					imgAlt="Card Image"
-					cardMargin="mb-4"
-					buttonText="Read More"
-				/>
-			</div>
+	<div class="row mt-5 gap-4">
+		<div class="" v-for="n in 3" :key="n">
+			<Card
+				:title="'Card Title ' + n"
+				text="Quick example text."
+				imgSrc="./src/assets/imgs/SmartBase.png"
+				imgAlt="Card Image"
+				cardMargin="m-4"
+				buttonText="Read More"
+			/>
 		</div>
+		<!-- </div> -->
 		<FeatureList
 			:features="[
 				{
@@ -53,7 +53,7 @@
 		<Testimonial
 			quote="This is a sample testimonial quote."
 			author="John Doe"
-			image="https://placehold.co/100x100"
+			image="./src/assets/imgs/userIcon.png"
 		/>
 	</div>
 </template>
