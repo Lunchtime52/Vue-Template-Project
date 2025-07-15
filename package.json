@@ -16,7 +16,7 @@
 		"bootstrap-icons": "^1.11.3",
 		"bootstrap-vue": "^1.5.1",
 		"bootstrap-vue-next": "^0.28.6",
-		"vue": "^3.4.37",
+		"vue": "^3.5.17",
 		"vue-components": "github:Lunchtime52/Vue-Components",
 		"vue-router": "^4.4.3"
 	},
